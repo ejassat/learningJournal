@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="index.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css">
+        <title>Personal Learning Journal</title>
+    </head>
+    <body>
+        <header class="header">
+            <h3>myLearningJournal</h3>
+            <a href="#home">Home</a>
+            <a href="about.html">About Me</a>
+        </header>
+        <main>
+            <div class="container">
+
+                <!-- Main blog / most recent blog -->
+                <div class="main-card">
+                    <label class="main-card-date">October 09, 2023</label>
+                    <a href="blog.html" class="main-card-title">My journey as a Frontend Developer Student</a>
+                    <p class="main-card-description">After a few months with the Frontend Developer Path, this is what I've learnt so far, and what I hope to learn as I continue</p>
+                </div>
+
+                <!-- Blog Tiles that show a preview of previous blogs -->
+                <div class="blog-tiles">
+                    <img src="images/blog-image-01.jpeg" class="blog-img" alt="blog-img" />
+                    <label class="blog-date">October 09, 2023</label>
+                    <h2 class="blog-title">Blog One</h2>
+                    <p class="blog-description">This is a filler description of the blog</p>
+                </div>
+
+                <div class="blog-tiles">
+                    <img src="images/blog-image-02.webp" class="blog-img" alt="blog-img" />
+                    <label class="blog-date">October 09, 2023</label>
+                    <h2 class="blog-title">Blog Two</h2>
+                    <p class="blog-description">This is a filler description of the blog</p>
+                </div>
+
+                <div class="blog-tiles">
+                    <img src="images/blog-image-3.jpg" class="blog-img" alt="blog-img" />
+                    <label class="blog-date">October 09, 2023</label>
+                    <h2 class="blog-title">Blog Three</h2>
+                    <p class="blog-description">This is a filler description of the blog</p>
+                </div>
+
+                <div class="blog-tiles hidden">
+                    <img src="images/blog-image-04.webp" class="blog-img" alt="blog-img" />
+                    <label class="blog-date">October 09, 2023</label>
+                    <h2 class="blog-title">Blog Four</h2>
+                    <p class="blog-description">This is a filler description of the blog</p>
+                </div>
+
+                <div class="blog-tiles hidden">
+                    <img src="images/blog-image-05.jpg" class="blog-img" alt="blog-img" />
+                    <label class="blog-date">October 09, 2023</label>
+                    <h2 class="blog-title">Blog Five</h2>
+                    <p class="blog-description">This is a filler description of the blog</p>
+                </div>
+
+                <div class="blog-tiles hidden">
+                    <img src="images/blog-image-06.jpg" class="blog-img" alt="blog-img" />
+                    <label class="blog-date">October 09, 2023</label>
+                    <h2 class="blog-title">Blog Six</h2>
+                    <p class="blog-description">This is a filler description of the blog</p>
+                </div>
+
+                <p class="read-more"><i class="fa-solid fa-angle-down"></i> Read More</p>
+            </div>
+        </main>
+    </body>
+    <footer>
+        <h3>myLearningJournal</h3>
+        <label>Copyright <i class="fa-regular fa-copyright"></i> 2023</label>
+    </footer>
+    <script>
+        const readMore = document.querySelector(".read-more");
+        const hiddenBlogs = document.querySelectorAll(".hidden");
+
+        readMore.addEventListener("click", () => {
+            hiddenBlogs.forEach((blog) => {
+                blog.classList.toggle("hidden")
+            })
+
+            // Toggle the text between "Read More" and "Read Less"
+            if (readMore.textContent === "Read More") {
+                readMore.textContent = "Read More"
+            } else {
+                readMore.innerHTML = `<p class="read-more"><i class="fa-solid fa-angle-up"></i> Read Less</p>`
+            }
+        })
+    </script>
+</html>
